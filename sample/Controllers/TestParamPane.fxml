@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="TestPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.TestParamController">
+   <children>
+      <Label layoutX="666.0" layoutY="-8.0" prefHeight="64.0" prefWidth="363.0" text="Test Parameters" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Pane layoutX="230.0" layoutY="83.0" prefHeight="430.0" prefWidth="333.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="228.0" layoutY="3.0" prefHeight="31.0" prefWidth="68.0" text="Units:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="3.0" prefHeight="31.0" prefWidth="106.0" text="Specimen:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileUnitCB" blendMode="DARKEN" layoutX="211.0" layoutY="29.0" prefHeight="31.0" prefWidth="91.0" />
+            <ChoiceBox fx:id="TensileSpecimenCB" blendMode="DARKEN" layoutX="32.0" layoutY="31.0" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="31.0" layoutY="63.0" prefHeight="31.0" prefWidth="111.0" text="Thickness:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileThicknessCB" blendMode="DARKEN" layoutX="33.0" layoutY="91.0" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="212.0" layoutY="62.0" prefHeight="31.0" prefWidth="103.0" text="Standard:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileStandardCB" blendMode="DARKEN" layoutX="211.0" layoutY="91.0" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="117.0" layoutY="122.0" prefHeight="31.0" prefWidth="106.0" text="Direction:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileDirectionCB" blendMode="DARKEN" layoutX="33.0" layoutY="147.0" prefHeight="31.0" prefWidth="268.0" />
+            <Label layoutX="40.0" layoutY="178.0" prefHeight="31.0" prefWidth="188.0" text="Custom Thickness:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="CustomThicknessTxt" alignment="CENTER" layoutX="231.0" layoutY="178.0" prefHeight="26.0" prefWidth="53.0" />
+            <JFXCheckBox fx:id="RoundAroundCB" layoutX="33.0" layoutY="265.0" onAction="#setRound" text="Round Around Standard First">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="111.0" layoutY="234.0" prefHeight="25.0" prefWidth="111.0" text="Rounding:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="664.0" layoutY="86.0" prefHeight="430.0" prefWidth="333.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="90.0" layoutY="5.0" prefHeight="25.0" prefWidth="188.0" text="Data To Include*:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="CBox" layoutX="59.0" layoutY="43.0" text="C">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="SiBox" layoutX="59.0" layoutY="73.0" prefHeight="26.0" prefWidth="49.0" text="Si">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="CoBox" layoutX="59.0" layoutY="103.0" prefHeight="26.0" prefWidth="55.0" text="Co">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="NiBox" layoutX="147.0" layoutY="43.0" prefHeight="26.0" prefWidth="55.0" text="Ni">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="CuBox" layoutX="147.0" layoutY="73.0" prefHeight="26.0" prefWidth="68.0" text="Cu">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="TiBox" layoutX="147.0" layoutY="103.0" prefHeight="26.0" prefWidth="55.0" text="Ti">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="MnBox" layoutX="229.0" layoutY="43.0" prefHeight="26.0" prefWidth="68.0" text="Mn">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="MoBox" layoutX="229.0" layoutY="73.0" prefHeight="26.0" prefWidth="68.0" text="Mo">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="SBox" layoutX="59.0" layoutY="133.0" text="S">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="AlBox" layoutX="147.0" layoutY="133.0" prefHeight="26.0" prefWidth="52.0" text="Al">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="NbBox" layoutX="147.0" layoutY="163.0" prefHeight="26.0" prefWidth="55.0" text="Nb">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="ZnBox" layoutX="229.0" layoutY="133.0" prefHeight="26.0" prefWidth="55.0" text="Zn">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="PBox" layoutX="59.0" layoutY="163.0" prefWidth="44.0" text="P">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="MgBox" layoutX="147.0" layoutY="193.0" prefHeight="26.0" prefWidth="68.0" text="Mg">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="WBox" layoutX="59.0" layoutY="193.0" prefWidth="44.0" text="W">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="VBox" layoutX="229.0" layoutY="163.0" prefWidth="44.0" text="V">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="PbBox" layoutX="147.0" layoutY="253.0" prefHeight="26.0" prefWidth="55.0" text="Pb">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="BiBox" layoutX="229.0" layoutY="253.0" prefHeight="26.0" prefWidth="55.0" text="Bi">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="BBox" layoutX="59.0" layoutY="223.0" prefWidth="44.0" text="B">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="SnBox" layoutX="59.0" layoutY="253.0" prefHeight="26.0" prefWidth="68.0" text="Sn">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="SeBox" layoutX="147.0" layoutY="223.0" prefHeight="26.0" prefWidth="55.0" text="Se">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="TaBox" layoutX="229.0" layoutY="193.0" prefHeight="26.0" prefWidth="55.0" text="Ta">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="ZrBox" layoutX="229.0" layoutY="283.0" prefHeight="26.0" prefWidth="55.0" text="Zr">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="AsBox" layoutX="147.0" layoutY="283.0" prefHeight="26.0" prefWidth="55.0" text="As">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="NBox" layoutX="59.0" layoutY="283.0" prefWidth="44.0" text="N">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="SrBox" layoutX="147.0" layoutY="313.0" prefHeight="26.0" prefWidth="50.0" text="Sr">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="AgBox" layoutX="229.0" layoutY="103.0" prefHeight="26.0" prefWidth="68.0" text="Ag">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+            <JFXCheckBox fx:id="FeBox" layoutX="229.0" layoutY="223.0" prefHeight="26.0" prefWidth="53.0" text="Fe">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXCheckBox>
+         </children>
+      </Pane>
+      <Pane layoutX="230.0" layoutY="542.0" prefHeight="400.0" prefWidth="333.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="127.0" layoutY="14.0" prefHeight="31.0" prefWidth="91.0" text="Method:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="HardnessMethodCB" blendMode="DARKEN" layoutX="39.0" layoutY="45.0" prefHeight="31.0" prefWidth="250.0" />
+            <ChoiceBox fx:id="HardnessLoadCB" blendMode="DARKEN" layoutX="39.0" layoutY="107.0" prefHeight="31.0" prefWidth="250.0" />
+            <Label layoutX="143.0" layoutY="76.0" prefHeight="31.0" prefWidth="68.0" text="Load:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="297.0" prefHeight="31.0" prefWidth="173.0" text="Layout format:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="HardnessLayoutCB" blendMode="DARKEN" layoutX="39.0" layoutY="328.0" prefHeight="31.0" prefWidth="250.0" />
+            <Label layoutX="112.0" layoutY="144.0" prefHeight="31.0" prefWidth="121.0" text="Test Type:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="HardnessTypeCB" blendMode="DARKEN" layoutX="39.0" layoutY="175.0" prefHeight="31.0" prefWidth="250.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="663.0" layoutY="548.0" prefHeight="388.0" prefWidth="333.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="131.0" layoutY="7.0" prefHeight="39.0" prefWidth="97.0" text="Method:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="77.0" prefHeight="31.0" prefWidth="68.0" text="Load:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="139.0" prefHeight="31.0" prefWidth="121.0" text="Test Type:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MicroMethodCB" blendMode="DARKEN" layoutX="43.0" layoutY="46.0" prefHeight="31.0" prefWidth="250.0" />
+            <ChoiceBox fx:id="MicroLoadCB" blendMode="DARKEN" layoutX="43.0" layoutY="108.0" prefHeight="31.0" prefWidth="250.0" />
+            <ChoiceBox fx:id="MicroTypeCB" blendMode="DARKEN" layoutX="43.0" layoutY="170.0" prefHeight="31.0" prefWidth="250.0" />
+            <Label layoutX="100.0" layoutY="295.0" prefHeight="31.0" prefWidth="173.0" text="Layout format:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MicroLayoutCB" blendMode="DARKEN" layoutX="42.0" layoutY="326.0" prefHeight="31.0" prefWidth="250.0" />
+            <ChoiceBox fx:id="MicroStdCB" blendMode="DARKEN" layoutX="43.0" layoutY="232.0" prefHeight="31.0" prefWidth="250.0" />
+            <Label layoutX="39.0" layoutY="201.0" prefHeight="31.0" prefWidth="268.0" text="Micro Hardness Standard:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="1064.0" layoutY="548.0" prefHeight="388.0" prefWidth="333.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <ChoiceBox fx:id="MetaLocationCB" blendMode="DARKEN" layoutX="43.0" layoutY="53.0" prefHeight="31.0" prefWidth="250.0" />
+            <Label layoutX="71.0" layoutY="14.0" prefHeight="39.0" prefWidth="197.0" text="Specimen Location:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="56.0" layoutY="120.0" prefHeight="39.0" prefWidth="121.0" text="Add Image:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="AddMetaImage" buttonType="RAISED" defaultButton="true" layoutX="190.0" layoutY="118.0" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+      <Label layoutX="340.0" layoutY="48.0" prefHeight="39.0" prefWidth="97.0" text="Tensile" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="771.0" layoutY="52.0" prefHeight="39.0" prefWidth="121.0" text="Chemical" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1157.0" layoutY="51.0" prefHeight="39.0" prefWidth="173.0" text="Impact\Bend" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="335.0" layoutY="509.0" prefHeight="39.0" prefWidth="121.0" text="Hardness" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1143.0" layoutY="513.0" prefHeight="39.0" prefWidth="197.0" text="Metallography" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="946.0" prefHeight="39.0" prefWidth="1071.0" text="*If no Standard Selected only Elements/Parameters included will show on report." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="727.0" layoutY="514.0" prefHeight="13.0" prefWidth="210.0" text="Micro-Hardness" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Pane layoutX="1064.0" layoutY="86.0" prefHeight="430.0" prefWidth="333.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <ChoiceBox fx:id="ImpactStandardCB" blendMode="DARKEN" layoutX="33.0" layoutY="74.0" prefHeight="31.0" prefWidth="121.0" />
+            <ChoiceBox fx:id="ImpactTestLocCB" blendMode="DARKEN" layoutX="33.0" layoutY="133.0" prefHeight="31.0" prefWidth="121.0" />
+            <ChoiceBox fx:id="ImpactSizeCB" blendMode="DARKEN" layoutX="188.0" layoutY="73.0" prefHeight="31.0" prefWidth="121.0" />
+            <ChoiceBox fx:id="ImpactTempCB" blendMode="DARKEN" layoutX="188.0" layoutY="132.0" prefHeight="31.0" prefWidth="121.0" />
+            <Label layoutX="41.0" layoutY="39.0" prefHeight="39.0" prefWidth="106.0" text="Standard:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="223.0" layoutY="39.0" prefHeight="39.0" prefWidth="53.0" text="Size:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="99.0" prefHeight="39.0" prefWidth="106.0" text="Test Loc:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="98.0" prefHeight="39.0" prefWidth="106.0" text="Temp:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="224.0" prefHeight="39.0" prefWidth="134.0" text="Custom Size:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" prefHeight="39.0" prefWidth="82.0" text="Impact:" textFill="#0f5d9a" underline="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="253.0" prefHeight="39.0" prefWidth="68.0" text="Bend:" textFill="#0f5d9a" underline="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="BendDiameterCB" blendMode="DARKEN" layoutX="33.0" layoutY="314.0" prefHeight="31.0" prefWidth="121.0" />
+            <ChoiceBox fx:id="BendDistanceCB" blendMode="DARKEN" layoutX="188.0" layoutY="314.0" prefHeight="31.0" prefWidth="121.0" />
+            <ChoiceBox fx:id="BendAngleCB" blendMode="DARKEN" layoutX="33.0" layoutY="375.0" prefHeight="31.0" prefWidth="121.0" />
+            <Label layoutX="43.0" layoutY="285.0" prefHeight="31.0" prefWidth="106.0" text="Diameter:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="285.0" prefHeight="31.0" prefWidth="97.0" text="Distance:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="346.0" prefHeight="31.0" prefWidth="68.0" text="Angle:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="102.0" layoutY="164.0" prefHeight="31.0" prefWidth="173.0" text="Layout format:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ImpactLayoutCB" blendMode="DARKEN" layoutX="33.0" layoutY="193.0" prefHeight="31.0" prefWidth="276.0" />
+            <JFXTextField fx:id="CustomThicknessTxt1" alignment="CENTER" layoutX="222.0" layoutY="219.0" prefHeight="13.0" prefWidth="53.0" />
+         </children></Pane>
+      <JFXButton fx:id="AddMetaImage1" buttonType="RAISED" defaultButton="true" layoutX="1422.0" layoutY="897.0" onAction="#ClearAll" prefHeight="39.0" prefWidth="121.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Clear All" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ImportController">
+   <children>
+      <Label layoutX="804.0" layoutY="14.0" prefHeight="64.0" prefWidth="262.0" text="יבוא מידע" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <TableView fx:id="SampleTbl" layoutX="177.0" layoutY="201.0" prefHeight="346.0" prefWidth="350.0" style="-fx-border-color: #0f5d9a; -fx-border-width: 1;">
+        <columns>
+          <TableColumn fx:id="SampleClm" prefWidth="347.9999694824219" resizable="false" text="ייובא" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="TensileBtn" buttonType="RAISED" defaultButton="true" layoutX="628.0" layoutY="211.0" onAction="#OpenTensile" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="מתיחה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ClearBtn" buttonType="RAISED" defaultButton="true" layoutX="277.0" layoutY="560.0" onAction="#ClearAll" prefHeight="45.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="נקה טבלה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ChemicalBtn" buttonType="RAISED" defaultButton="true" layoutX="628.0" layoutY="374.0" onAction="#OpenChemical" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="כימיה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="MicroHBtn" buttonType="RAISED" defaultButton="true" layoutX="816.0" layoutY="500.0" onAction="#OpenMicroHardness" prefHeight="50.0" prefWidth="171.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="מיקרו קושיות" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="HardnessBtn" buttonType="RAISED" defaultButton="true" layoutX="1004.0" layoutY="374.0" onAction="#OpenHardness" prefHeight="50.0" prefWidth="162.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="קושיות" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ImpactBtn" buttonType="RAISED" defaultButton="true" layoutX="1004.0" layoutY="211.0" onAction="#OpenImpact" prefHeight="50.0" prefWidth="162.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="נגיפה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="867.0" layoutY="651.0" prefHeight="37.0" prefWidth="162.0" text="חשוב!" textFill="RED" underline="true">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="741.0" prefHeight="31.0" prefWidth="676.0" text="בבדיקת המתיחה נתמכים                      גם עם מספר דגמים בכל קובץ." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="558.0" layoutY="704.0" prefHeight="31.0" prefWidth="710.0" text="באנליזה כימית נתמכים                       אך רק(!) דגם אחד לכל קובץ." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="580.0" layoutY="780.0" prefHeight="31.0" prefWidth="676.0" text="בבדיקת הנגיפה נתמך רק(!)                  עם נתונים ממספר דגמים." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="570.0" layoutY="816.0" prefHeight="31.0" prefWidth="764.0" text="בבדיקת הקושיות נתמך רק(!)                  עם נתונים ממספר דגמים." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="837.0" layoutY="704.0" prefHeight="31.0" prefWidth="126.0" text="קבצים רבים" textFill="#ff00bb">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="817.0" layoutY="816.0" prefHeight="31.0" prefWidth="97.0" text="קובץ אחד" textFill="#2fe80f">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="824.0" layoutY="780.0" prefHeight="31.0" prefWidth="109.0" text="קובץ אחד" textFill="#2fe80f">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="825.0" layoutY="741.0" prefHeight="31.0" prefWidth="171.0" text="קבצים רבים" textFill="#ff00bb">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="511.0" layoutY="852.0" prefHeight="31.0" prefWidth="764.0" text="בבדיקת המיקרו-קושיות נתמך רק(!)                  עם נתונים ממספר דגמים." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="758.0" layoutY="852.0" prefHeight="31.0" prefWidth="97.0" text="קובץ אחד" textFill="#2fe80f">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

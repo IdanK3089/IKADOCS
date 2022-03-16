@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="294.0" spacing="5.0" styleClass="filter-dialog" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Filter.FilterController">
+   <children>
+      <TextField fx:id="filterTf" />
+      <ListView fx:id="filterLv" prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER_RIGHT" spacing="5.0" VBox.vgrow="NEVER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#hide" text="בטל" />
+            <Button mnemonicParsing="false" onAction="#clear" text="נקה" />
+            <Button mnemonicParsing="false" onAction="#filter" text="סינון" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

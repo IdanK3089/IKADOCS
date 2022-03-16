@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.UserController">
+   <children>
+      <Label layoutX="650.0" layoutY="12.0" prefHeight="60.0" prefWidth="296.0" text="Report Details" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="ReportName" layoutX="190.0" layoutY="116.0" onAction="#setReportName" onKeyPressed="#setReportName" onKeyReleased="#setReportName" onKeyTyped="#setReportName" prefHeight="30.0" prefWidth="143.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <Label layoutX="645.0" layoutY="501.0" prefHeight="60.0" prefWidth="304.0" text="Report Makers" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="107.0" prefHeight="50.0" prefWidth="187.0" text="Report Name:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="182.0" prefHeight="50.0" prefWidth="256.0" text="Report Launguage:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="EngRadio" layoutX="19.0" layoutY="283.0" text="English" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="HebRadio" layoutX="19.0" layoutY="244.0" text="Hebrew" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <TableView fx:id="PreparerTbl" layoutX="121.0" layoutY="591.0" prefHeight="270.0" prefWidth="671.0" style="-fx-border-color: #0747a6; -fx-border-wi: 2;">
+        <columns>
+          <TableColumn fx:id="SelectPrepClm" prefWidth="25.0" resizable="false" />
+          <TableColumn fx:id="NameColumn" editable="false" onEditCommit="#edit_colnom" prefWidth="184.0" text="Name" />
+            <TableColumn fx:id="TitleColumn" editable="false" onEditCommit="#edit_colnom" prefWidth="460.0" text="Title" />
+        </columns>
+      </TableView>
+      <TableView fx:id="ApproverTbl" layoutX="869.0" layoutY="591.0" prefHeight="270.0" prefWidth="671.0" style="-fx-border-color: #0747a6; -fx-border-wi: 2;">
+         <columns>
+            <TableColumn fx:id="SelectAppClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="AppNameClm" editable="false" onEditCommit="#edit_colnom" prefWidth="291.0" text="Name" />
+            <TableColumn fx:id="AppTitleClm" editable="false" onEditCommit="#edit_colnom" prefWidth="353.0" text="Title" />
+         </columns>
+      </TableView>
+      <Label layoutX="121.0" layoutY="552.0" prefHeight="38.0" prefWidth="113.0" text="Preparer:" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="869.0" layoutY="546.0" prefHeight="50.0" prefWidth="169.0" text="Approver:" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="936.0" prefHeight="50.0" prefWidth="96.0" text="Name:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="561.0" layoutY="936.0" prefHeight="50.0" prefWidth="71.0" text="Title:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="NameText" layoutX="217.0" layoutY="940.0" prefHeight="31.0" prefWidth="331.0" />
+      <JFXTextField fx:id="TitleText" layoutX="633.0" layoutY="940.0" prefHeight="31.0" prefWidth="559.0" />
+      <Spinner fx:id="ApproveSpn" layoutX="1212.0" layoutY="936.0" prefHeight="39.0" prefWidth="187.0" />
+      <Label layoutX="1212.0" layoutY="891.0" prefHeight="39.0" prefWidth="104.0" text="Approver:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="DetailTbl" editable="true" layoutX="564.0" layoutY="103.0" prefHeight="231.0" prefWidth="1025.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="DetailSelClm" editable="false" prefWidth="25.0" resizable="false" />
+         </columns></TableView>
+      <TableView fx:id="HeaderTbl" layoutX="341.0" layoutY="103.0" prefHeight="231.0" prefWidth="220.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="HeaderSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="HeaderClm" editable="false" prefWidth="194.0" resizable="false" text="Header" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="login21" buttonType="RAISED" defaultButton="true" layoutX="395.0" layoutY="337.0" onAction="#AddHeaderToTbl" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="login11" buttonType="RAISED" defaultButton="true" layoutX="1427.0" layoutY="936.0" onMouseClicked="#AddRecord" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="login211" buttonType="RAISED" defaultButton="true" layoutX="1452.0" layoutY="337.0" onAction="#unSelect" prefHeight="39.0" prefWidth="137.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Unselect" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="StateTbl" editable="true" layoutX="565.0" layoutY="335.0" prefHeight="132.0" prefWidth="187.0" style="-fx-border-color: #0f5d9a; -fx-border-width: 1;">
+         <columns>
+            <TableColumn fx:id="StateSelClm" editable="false" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="StateClm" editable="false" prefWidth="160.0" resizable="false" text="State" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="LoadBtn" buttonType="RAISED" defaultButton="true" layoutX="762.0" layoutY="417.0" onAction="#onLoadActionEvent" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Load" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Pagination fx:id="StatePager" layoutX="565.0" layoutY="335.0" maxPageIndicatorCount="0" prefHeight="174.0" prefWidth="187.0" style="-fx-page-information-visible: 0;" />
+      <JFXButton fx:id="LoadBtn1" buttonType="RAISED" defaultButton="true" layoutX="762.0" layoutY="337.0" onAction="#Refresh" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Refreash" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="LoadBtn11" buttonType="RAISED" defaultButton="true" layoutX="121.0" layoutY="868.0" onAction="#RefreshPrep" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Refreash" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="LoadBtn111" buttonType="RAISED" defaultButton="true" layoutX="869.0" layoutY="868.0" onAction="#RefreshApp" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Refreash" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="LoadBtn12" buttonType="RAISED" defaultButton="true" layoutX="680.0" layoutY="868.0" onAction="#EditPrepTbl" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Edit Table" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="LoadBtn121" buttonType="RAISED" defaultButton="true" layoutX="1427.0" layoutY="868.0" onAction="#EditAppTbl" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Edit Table" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1166.0" layoutY="366.0" prefHeight="39.0" prefWidth="152.0" text="Important!" textFill="#ff1500">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1085.0" layoutY="401.0" prefHeight="31.0" prefWidth="314.0" text="In case editing of details table" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1082.0" layoutY="422.0" prefHeight="31.0" prefWidth="314.0" text="was made, selection has to be" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1081.0" layoutY="446.0" prefHeight="31.0" prefWidth="331.0" text="carried again(it will be cancelled" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1083.0" layoutY="470.0" prefHeight="31.0" prefWidth="314.0" text="automatically on edit)." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

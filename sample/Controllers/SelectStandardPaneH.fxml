@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="SelectStandardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.StandardSelectController">
+   <children>
+      <Label layoutX="709.0" layoutY="-6.0" prefHeight="64.0" prefWidth="225.0" text="בחירת תקן" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <TableView fx:id="StandardTbl" editable="true" layoutX="1057.0" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="308.0" style="-fx-border-color: #0f5d9a;">
+        <columns>
+          <TableColumn fx:id="StandardClm" prefWidth="262.0" resizable="false" text="תקן" />
+          <TableColumn fx:id="StandardSelClm" prefWidth="28.0" resizable="false" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="GeneralTbl" layoutX="645.0" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="308.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="GeneralClm" prefWidth="262.0" resizable="false" text="חומר כללי" />
+            <TableColumn fx:id="GeneralSelClm" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="SpecificTbl" layoutX="233.0" layoutY="58.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="308.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="SpecificClm" prefWidth="262.0" resizable="false" text="חומר ספציפי" />
+            <TableColumn fx:id="SpecificSelClm" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ClassTbl" layoutX="1057.0" layoutY="403.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="308.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="ClassClm" prefWidth="262.0" resizable="false" text="חוזק בורג/מידע כללי" />
+            <TableColumn fx:id="ClassSelClm" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="SizeTbl" layoutX="232.0" layoutY="403.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="308.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="SizeClm" prefWidth="262.0" resizable="false" text="מידות" />
+            <TableColumn fx:id="SizeSelClm" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ShapeTbl" layoutX="645.0" layoutY="403.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="300.0" prefWidth="308.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="ShapeClm" prefWidth="262.0" resizable="false" text="צורה" />
+            <TableColumn fx:id="ShapeSelClm" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="SelectBtn" buttonType="RAISED" defaultButton="true" layoutX="74.0" layoutY="902.0" onAction="#SelectStd" prefHeight="50.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף תקן" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="SelectBtn11" buttonType="RAISED" defaultButton="true" layoutX="1427.0" layoutY="902.0" onAction="#Refresh" prefHeight="50.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="רענן" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="SelectedTbl" layoutX="548.0" layoutY="728.0" prefHeight="162.0" prefWidth="525.0">
+        <columns>
+          <TableColumn fx:id="SelectedClm" prefWidth="524.0" text="תקנים שנבחרו" />
+        </columns>
+      </TableView>
+      <Label layoutX="1194.0" layoutY="713.0" prefHeight="39.0" prefWidth="83.0" text="חשוב!" textFill="#ff1500">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1120.0" layoutY="745.0" prefHeight="31.0" prefWidth="253.0" text="ניתן להשוות ליותר מתקן" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1123.0" layoutY="771.0" prefHeight="31.0" prefWidth="225.0" text="אחד(!),עיגול התוצאות " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1114.0" layoutY="795.0" prefHeight="31.0" prefWidth="280.0" text="מתבצע רק מול התקן בעל " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1095.0" layoutY="820.0" prefHeight="31.0" prefWidth="318.0" text=" מספר הפרמטרים הגבוה ביותר," textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="SelectBtn12" buttonType="RAISED" defaultButton="true" layoutX="725.0" layoutY="902.0" onAction="#UnselectStd" prefHeight="50.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="בטל בחירה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="359.0" layoutY="755.0" prefHeight="39.0" prefWidth="83.0" text="חשוב!" textFill="#ff1500">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="269.0" layoutY="787.0" prefHeight="31.0" prefWidth="246.0" text="בחירה של יותר מתקן אחד" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="813.0" prefHeight="31.0" prefWidth="308.0" text="מותאמת לעבוד כאשר מדובר " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="258.0" layoutY="841.0" prefHeight="31.0" prefWidth="269.0" text="על חומרים בעלי הרכב דומה." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1102.0" layoutY="841.0" prefHeight="31.0" prefWidth="291.0" text="אלא אם בוטל, והעיגול מתבצע" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1115.0" layoutY="863.0" prefHeight="31.0" prefWidth="291.0" text="מול התקן הראשון שנבחר." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="OrderBox" layoutX="1149.0" layoutY="903.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="20.0" prefWidth="183.0" text="ביטול סידור התקנים">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</AnchorPane>

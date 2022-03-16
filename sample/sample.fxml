@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="GeneralPane" maxHeight="1900.0" maxWidth="2188.0" minHeight="1006.0" minWidth="1899.0" prefHeight="1006.0" prefWidth="2188.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Controller">
+   <children>
+      <AnchorPane prefHeight="1006.0" prefWidth="300.0" style="-fx-background-color: #0f5d9a;" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="TemplateBtn" layoutX="6.0" layoutY="744.0" onAction="#OpenFile" prefHeight="53.0" prefWidth="239.0" text="Open Template" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="COMMENT_TEXT_OUTLINE" size="24" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="GenerateScreenBtn" layoutX="3.0" layoutY="50.0" onAction="#ShowGenerateReport" prefHeight="51.0" prefWidth="255.0" text=" Generate Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILE_TEXT_ALT" size="25" />
+               </graphic></JFXButton>
+            <JFXButton fx:id="ImportBtn" layoutX="-1.0" layoutY="678.0" onAction="#ShowImportPane" prefHeight="51.0" prefWidth="213.0" text="Import Data" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="PLUS_CIRCLE_OUTLINE" size="24" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="AddEditBtn" layoutX="8.0" layoutY="806.0" onAction="#ShowEdit" prefHeight="53.0" prefWidth="284.0" text="Add\Edit Standards" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="MESSAGE_DRAW" size="24" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="ReportBtn" layoutX="-43.0" layoutY="101.0" onAction="#ShowReportDetail" prefHeight="61.0" prefWidth="298.0" text=" Report Data" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="ATTACHMENT" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ClientBtn" layoutX="-23.0" layoutY="162.0" onAction="#ShowClient" prefHeight="61.0" prefWidth="298.0" text=" Client Selection" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="ATTACHMENT" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="SelectBtn" layoutX="-1.0" layoutY="223.0" onAction="#ShowSelectPane" prefHeight="61.0" prefWidth="298.0" text=" Standard Selection" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="ATTACHMENT" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="AboutBtn" layoutX="-1.0" layoutY="920.0" onAction="#ShowAbout" prefHeight="51.0" prefWidth="144.0" text="About" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="INFORMATION_OUTLINE" size="24" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="TestBtn" layoutX="-31.0" layoutY="284.0" onAction="#ShowTestPane" prefHeight="61.0" prefWidth="298.0" text=" Tests Options" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="ATTACHMENT" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Form52Btn" layoutX="7.0" layoutY="345.0" onAction="#ShowForm52" prefHeight="61.0" prefWidth="167.0" text=" Form 52" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="ATTACHMENT" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ConvertionBtn" layoutY="400.0" onAction="#ShowConversion" prefHeight="61.0" prefWidth="232.0" text=" Conversions" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="REDO" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="AddEditBtn1" layoutX="6.0" layoutY="859.0" onAction="#ShowLogin" prefHeight="53.0" prefWidth="130.0" text="Login" textFill="WHITE">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="FINGERPRINT" size="24" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="TrackingBtn1" layoutX="-50.0" layoutY="523.0" prefHeight="61.0" prefWidth="270.0" text=" Library" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#dadada" glyphName="SCHOOL" size="30" wrappingWidth="25.0" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="GeneratePane" layoutX="301.0" layoutY="-6.0" prefHeight="1006.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fx:id="IkaImage" fitHeight="667.0" fitWidth="939.0" layoutX="339.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

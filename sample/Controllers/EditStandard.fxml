@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.StandardController">
+   <children>
+      <TableView fx:id="StdTbl" layoutX="272.0" layoutY="39.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a; -fx-border-width: 2dp;">
+        <columns>
+          <TableColumn fx:id="StandardSelClm" prefWidth="25.0" resizable="false" />
+          <TableColumn fx:id="StdClm" onEditCommit="#ParamEdit" prefWidth="252.99996948242188" resizable="false" text="Standard" />
+        </columns>
+      </TableView>
+      <TableView fx:id="GeneralTbl" layoutX="594.0" layoutY="43.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="GeneralSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="GeneralClm" onEditCommit="#ParamEdit" prefWidth="253.0" resizable="false" text="General Material" />
+         </columns>
+      </TableView>
+      <TableView fx:id="SpecificTbl" layoutX="916.0" layoutY="41.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="SpecificSelClm" prefWidth="25.0" />
+            <TableColumn fx:id="SpecificClm" onEditCommit="#ParamEdit" prefWidth="253.0" resizable="false" text="Specific Material" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ClassTbl" layoutX="271.0" layoutY="368.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="ClassSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="ClassClm" onEditCommit="#ParamEdit" prefWidth="253.0" resizable="false" text="Class Property\General Info" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ShapeTbl" layoutX="593.0" layoutY="369.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="ShapeSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="ShapeClm" onEditCommit="#ParamEdit" prefWidth="253.0" resizable="false" text="Shape" />
+         </columns>
+      </TableView>
+      <TableView fx:id="SizeTbl" layoutX="914.0" layoutY="368.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="SizeSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="SizeClm" onEditCommit="#ParamEdit" prefWidth="253.0" resizable="false" text="Size" />
+         </columns>
+      </TableView>
+      <TableView fx:id="TestTbl" layoutX="272.0" layoutY="698.0" prefHeight="280.0" prefWidth="280.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="TypeSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="TestTypeClm" onEditCommit="#ParamEdit" prefWidth="252.99996948242188" resizable="false" text="Test Type" />
+         </columns>
+      </TableView>
+      <Label layoutX="552.0" layoutY="-18.0" prefHeight="71.0" prefWidth="406.0" text="Add/Edit Standards" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="StandardText" layoutX="273.0" layoutY="329.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="GeneralText" layoutX="596.0" layoutY="332.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXTextField fx:id="SpecificText" layoutX="916.0" layoutY="330.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXTextField fx:id="ClassText" layoutX="281.0" layoutY="647.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="ShapeText" layoutX="594.0" layoutY="646.0" prefHeight="31.0" prefWidth="193.0" />
+      <JFXTextField fx:id="SizeText" layoutX="914.0" layoutY="650.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXButton fx:id="login" buttonType="RAISED" defaultButton="true" layoutX="473.0" layoutY="323.0" onAction="#insertStandardData" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="GeneralBtn" buttonType="RAISED" defaultButton="true" layoutX="796.0" layoutY="327.0" onAction="#AddGeneral" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="AddSpecific" buttonType="RAISED" defaultButton="true" layoutX="1114.0" layoutY="324.0" onAction="#AddSpecific" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ClassBtn" buttonType="RAISED" defaultButton="true" layoutX="473.0" layoutY="652.0" onAction="#AddClass" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ShapeBtn" buttonType="RAISED" defaultButton="true" layoutX="793.0" layoutY="651.0" onAction="#AddShape" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="SizeBtn" buttonType="RAISED" defaultButton="true" layoutX="1112.0" layoutY="651.0" onAction="#AddSize" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="34.0" layoutY="912.0" onAction="#RestoreDB" prefHeight="60.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Restore Database" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="1354.0" layoutY="912.0" onAction="#Backup" prefHeight="60.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Backup Database" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1294.0" layoutY="696.0" prefHeight="34.0" prefWidth="147.0" text="Important!" textFill="#ff1500">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1217.0" layoutY="728.0" prefHeight="31.0" prefWidth="298.0" text="Do not forget to add &quot;Rest&quot;" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1218.0" layoutY="759.0" prefHeight="31.0" prefWidth="326.0" text="in chemical parameters, adding" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="791.0" layoutY="805.0" prefHeight="31.0" prefWidth="233.0" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1213.0" layoutY="790.0" prefHeight="31.0" prefWidth="317.0" text="&quot;Rest&quot; should be with capital" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1226.0" layoutY="255.0" prefHeight="31.0" prefWidth="45.0" text="No!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1271.0" layoutY="255.0" prefHeight="31.0" prefWidth="241.0" text="spaces in the Min,Max" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1226.0" layoutY="284.0" prefHeight="31.0" prefWidth="308.0" text="Min Tolerance, Max Tolerance" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1228.0" layoutY="314.0" prefHeight="31.0" prefWidth="308.0" text="and Uncertainity data." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1311.0" layoutY="373.0" prefHeight="31.0" prefWidth="132.0" text="Remember!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1226.0" layoutY="404.0" prefHeight="31.0" prefWidth="308.0" text="to backup after data addition" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1305.0" layoutY="37.0" prefHeight="31.0" prefWidth="132.0" text="Important!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1213.0" layoutY="70.0" prefHeight="31.0" prefWidth="317.0" text="In the &quot;Others&quot; parameter you " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1229.0" layoutY="98.0" prefHeight="31.0" prefWidth="317.0" text="can add an expression to be" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1256.0" layoutY="124.0" prefHeight="31.0" prefWidth="208.0" text="shown in the report." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1226.0" layoutY="187.0" prefHeight="31.0" prefWidth="317.0" text="Example: &quot;Cu + 10Sn &lt;= 0.6&quot;." textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1209.0" layoutY="153.0" prefHeight="31.0" prefWidth="363.0" text="Add expression in the Min or Max." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1220.0" layoutY="821.0" prefHeight="31.0" prefWidth="317.0" text="latter and no spaces!." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="MinMaxTable" layoutX="571.0" layoutY="698.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="638.0">
+         <columns>
+            <TableColumn fx:id="ParamNameColumn" prefWidth="163.20006716251373" text="Parameter" />
+            <TableColumn fx:id="MinColumn" minWidth="0.0" onEditCommit="#edit_colnom" prefWidth="92.79986572265625" text="Min" />
+            <TableColumn fx:id="MaxColumn" onEditCommit="#edit_colnom" prefWidth="92.7999267578125" text="Max" />
+            <TableColumn fx:id="TolarenceMinColumn" minWidth="0.0" onEditCommit="#edit_colnom" prefWidth="87.19998168945312" text="\% Min Ø" />
+            <TableColumn fx:id="TolarenceMaxColumn" minWidth="0.0" onEditCommit="#edit_colnom" prefWidth="96.00006103515625" text="\% Max Ø" />
+            <TableColumn fx:id="UncertainityColumn" onEditCommit="#edit_colnom" prefWidth="103.99997558593748" text="Uncertainty" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

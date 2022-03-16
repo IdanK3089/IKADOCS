@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ClientPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ClientController">
+   <children>
+      <Label layoutX="632.0" layoutY="14.0" prefHeight="64.0" prefWidth="330.0" text="Client Selection" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ClientTbl" layoutX="227.0" layoutY="117.0" prefHeight="243.0" prefWidth="1181.0" style="-fx-border-color: #0f5d9a;">
+        <columns>
+          <TableColumn fx:id="ClientSelClm" prefWidth="25.0" resizable="false" />
+          <TableColumn fx:id="CompanyClm" onEditCommit="#edit_Client" prefWidth="522.9999694824219" resizable="false" text="Company" />
+            <TableColumn fx:id="AdressClm" onEditCommit="#edit_Client" prefWidth="631.0" text="Adress" />
+        </columns>
+      </TableView>
+      <TableView fx:id="ContactTbl" layoutX="227.0" layoutY="561.0" prefHeight="224.0" prefWidth="1181.0" style="-fx-border-color: #0f5d9a;">
+        <columns>
+            <TableColumn fx:id="ContactSelClm" editable="false" minWidth="0.0" prefWidth="25.0" resizable="false" />
+          <TableColumn fx:id="NameClm" onEditCommit="#edit_Contact" prefWidth="333.9999542236328" resizable="false" text="Name" />
+          <TableColumn fx:id="EmailClm" onEditCommit="#edit_Contact" prefWidth="527.0000305175781" resizable="false" text="Email" />
+            <TableColumn fx:id="PhoneClm" onEditCommit="#edit_Contact" prefWidth="295.0" resizable="false" text="Phone" />
+        </columns>
+      </TableView>
+      <Label layoutX="648.0" layoutY="468.0" prefHeight="81.0" prefWidth="313.0" text="Contact Table" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="841.0" prefHeight="50.0" prefWidth="94.0" text="Name:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="NameText" layoutX="319.0" layoutY="851.0" prefHeight="31.0" prefWidth="313.0" />
+      <Label layoutX="657.0" layoutY="841.0" prefHeight="50.0" prefWidth="94.0" text="Email:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="EmailText" layoutX="752.0" layoutY="851.0" prefHeight="31.0" prefWidth="266.0" />
+      <Label layoutX="1036.0" layoutY="847.0" prefHeight="50.0" prefWidth="94.0" text="Phone:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="PhoneText" layoutX="1128.0" layoutY="857.0" prefHeight="31.0" prefWidth="196.0" />
+      <Label layoutX="224.0" layoutY="423.0" prefHeight="50.0" prefWidth="220.0" text="Company Name:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="CompanyText" layoutX="436.0" layoutY="433.0" prefHeight="31.0" prefWidth="196.0" />
+      <Label layoutX="644.0" layoutY="424.0" prefHeight="50.0" prefWidth="94.0" text="Adress:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="AdressText" layoutX="768.0" layoutY="433.0" prefHeight="31.0" prefWidth="537.0" />
+      <JFXButton fx:id="ClientAddBtn" buttonType="RAISED" defaultButton="true" layoutX="1329.0" layoutY="423.0" onAction="#AddClient" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ContactAddBtn" buttonType="RAISED" defaultButton="true" layoutX="1329.0" layoutY="846.0" onAction="#AddContact" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ContactAddBtn1" buttonType="RAISED" defaultButton="true" layoutX="36.0" layoutY="915.0" onAction="#EditTbls" prefHeight="50.0" prefWidth="166.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Edit Tables" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ClientAddBtn1" buttonType="RAISED" defaultButton="true" layoutX="227.0" layoutY="366.0" onAction="#RefreshClient" prefHeight="42.0" prefWidth="107.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="Refresh" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

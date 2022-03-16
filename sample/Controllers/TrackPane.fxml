@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.TrackingController">
+   <children>
+      <Label layoutX="742.0" prefHeight="81.0" prefWidth="372.0" text="Form 52 Tracking" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <TableView layoutX="226.0" layoutY="89.0" prefHeight="272.0" prefWidth="1265.0">
+        <columns>
+            <TableColumn prefWidth="298.0" text="תאריך סיום עבודות" />
+            <TableColumn prefWidth="373.0" text="תאריך קבלת טופס" />
+          <TableColumn prefWidth="565.0" text="שם הטופס ומספר עבודה" />
+            <TableColumn editable="false" prefWidth="28.0" />
+        </columns>
+      </TableView>
+      <JFXRadioButton fx:id="ChemistryRB" contentDisplay="RIGHT" layoutX="514.0" layoutY="458.0" nodeOrientation="RIGHT_TO_LEFT" text="אנליזה כימית" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="TensileRB" contentDisplay="RIGHT" layoutX="1306.0" layoutY="458.0" nodeOrientation="RIGHT_TO_LEFT" text="מתיחה">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="MicroRB" contentDisplay="RIGHT" layoutX="512.0" layoutY="381.0" nodeOrientation="RIGHT_TO_LEFT" text="מיקרו-קושיות">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="HardnessRB" contentDisplay="RIGHT" layoutX="789.0" layoutY="458.0" nodeOrientation="RIGHT_TO_LEFT" text="קושיות">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="ImpactRB" contentDisplay="RIGHT" layoutX="1042.0" layoutY="458.0" nodeOrientation="RIGHT_TO_LEFT" text="נגיפה">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="MetaRB" layoutX="975.0" layoutY="381.0" nodeOrientation="RIGHT_TO_LEFT" text="מטלוגרפייה">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="859.0" layoutY="522.0" prefHeight="50.0" prefWidth="196.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="אישור ביצוע" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="226.0" layoutY="648.0" prefHeight="265.0" prefWidth="1285.0">
+         <columns>
+            <TableColumn prefWidth="171.0" text="בדיקת מתיחה" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" />
+            <TableColumn editable="false" prefWidth="157.0" text="אנליזה כימית" />
+            <TableColumn editable="false" prefWidth="157.0" text="בדיקת קושיות" />
+            <TableColumn editable="false" prefWidth="163.0" text="בדיקת מיקרו-קושיות" />
+            <TableColumn editable="false" prefWidth="149.0" text="בדיקת נגיפה" />
+            <TableColumn editable="false" prefWidth="118.0" text="בדיקת כפיפה" />
+            <TableColumn editable="false" prefWidth="166.99996948242188" text="הכנת דגמים" />
+            <TableColumn editable="false" prefWidth="202.0" text="שם הטופס ומספר עבודה" />
+         </columns>
+      </TableView>
+      <JFXRadioButton fx:id="BendRB" contentDisplay="RIGHT" layoutX="792.0" layoutY="381.0" nodeOrientation="RIGHT_TO_LEFT" text="כפיפה">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="859.0" layoutY="582.0" prefHeight="50.0" prefWidth="196.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="ביטול ביצוע" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="226.0" layoutY="366.0" prefHeight="50.0" prefWidth="196.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="רענן טבלה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="226.0" layoutY="918.0" prefHeight="50.0" prefWidth="196.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="רענן טבלה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="TensileRB1" contentDisplay="RIGHT" layoutX="1250.0" layoutY="381.0" nodeOrientation="RIGHT_TO_LEFT" text="הכנת דגמים">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>

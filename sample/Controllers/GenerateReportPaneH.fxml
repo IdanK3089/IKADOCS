@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1670.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.GenerateController">
+   <children>
+      <Label layoutX="683.0" prefHeight="64.0" prefWidth="282.0" text="הצגה מהירה" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <WebView fx:id="DocView" layoutX="524.0" layoutY="64.0" prefHeight="908.0" prefWidth="597.0" />
+      <Pagination fx:id="GeneratePager" layoutX="1364.0" layoutY="99.0" maxPageIndicatorCount="0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="310.0" prefWidth="250.0" style="-fx-page-information-visible: 0;" />
+      <TableView fx:id="ReportTbl" layoutX="1363.0" layoutY="99.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="264.0" prefWidth="250.0" style="-fx-border-color: #0f5d9a;">
+        <columns>
+          <TableColumn fx:id="ReportSelClm" minWidth="0.0" prefWidth="25.0" resizable="false" sortable="false" />
+            <TableColumn fx:id="ReportClm" prefWidth="223.0" resizable="false" sortable="false" text="דו&quot;ח" />
+        </columns>
+      </TableView>
+      <Label layoutX="1399.0" layoutY="559.0" prefHeight="26.0" prefWidth="178.0" text="שם הדו&quot;ח צריך להיות " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1440.0" layoutY="585.0" prefHeight="26.0" prefWidth="138.0" text="זהה לשם בטבלה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1408.0" layoutY="611.0" prefHeight="26.0" prefWidth="167.0" text="כדי לפתוח או לחתום." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1405.0" layoutY="685.0" prefHeight="26.0" prefWidth="167.0" text="סגור את המסמך בכל" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1379.0" layoutY="711.0" prefHeight="26.0" prefWidth="199.0" text="המחשבים לפני החתימה!" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="TensileBtn" buttonType="RAISED" defaultButton="true" layoutX="1407.0" layoutY="409.0" onAction="#SignReport" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="חתום" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="TensileBtn1" buttonType="RAISED" defaultButton="true" layoutX="1407.0" layoutY="475.0" onAction="#RefreashTbl" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="רענן" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="OpenFileBtn" buttonType="RAISED" defaultButton="true" layoutX="1407.0" layoutY="896.0" onAction="#OpenReport" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="פתח דו&quot;ח" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="GenerateBtn" buttonType="RAISED" defaultButton="true" layoutX="46.0" layoutY="896.0" onAction="#Generate" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הכן דו&quot;ח" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1416.0" layoutY="771.0" prefHeight="26.0" prefWidth="167.0" text="ההצגה המהירה לא " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1432.0" layoutY="797.0" prefHeight="26.0" prefWidth="150.0" text="מציגה גבולות של " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1500.0" layoutY="823.0" prefHeight="26.0" prefWidth="82.0" text="טבלאות." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

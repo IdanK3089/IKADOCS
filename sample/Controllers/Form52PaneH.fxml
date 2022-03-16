@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Form52Controller">
+   <children>
+      <TableView fx:id="DetailTbl" editable="true" layoutX="34.0" layoutY="570.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="228.0" prefWidth="1301.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="DetailSelClm" prefWidth="25.0" resizable="false" />
+         </columns></TableView>
+      <TableView fx:id="StateTbl" layoutX="1085.0" layoutY="806.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="135.0" prefWidth="250.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="StateSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="StateClm" prefWidth="223.0" resizable="false" text="מצבים" />
+         </columns>
+      </TableView>
+      <TableView fx:id="HeaderTbl" layoutX="1344.0" layoutY="570.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="228.0" prefWidth="220.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="HeaderSelClm" prefWidth="25.0" resizable="false" />
+            <TableColumn fx:id="HeaderClm" prefWidth="194.0" resizable="false" text="פרטים" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="login21" buttonType="RAISED" defaultButton="true" layoutX="1393.0" layoutY="803.0" onAction="#AddHeaderToTbl" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="login211" buttonType="RAISED" defaultButton="true" layoutX="1387.0" layoutY="920.0" onAction="#AddNewHeader" prefHeight="39.0" prefWidth="125.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף פרטים" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="HeaderTxt" layoutX="1343.0" layoutY="872.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="220.0" />
+      <JFXButton fx:id="login" buttonType="RAISED" defaultButton="true" layoutX="935.0" layoutY="884.0" onAction="#onLoadActionEvent" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="טען" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="login1" buttonType="RAISED" defaultButton="true" layoutX="935.0" layoutY="812.0" onAction="#onSaveActionEvent" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="שמור" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="747.0" layoutY="-11.0" prefHeight="64.0" prefWidth="203.0" text="טופס 52:" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Pane layoutX="1112.0" layoutY="92.0" prefHeight="477.0" prefWidth="262.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="43.0" layoutY="14.0" prefHeight="31.0" prefWidth="61.0" text="דגם:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileTypeCB" blendMode="DARKEN" layoutX="23.0" layoutY="45.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="160.0" layoutY="14.0" prefHeight="31.0" prefWidth="74.0" text="יחידות:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileUnitCB" layoutX="149.0" layoutY="45.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="173.0" layoutY="77.0" prefHeight="31.0" prefWidth="53.0" text="תקן:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileStdCB" layoutX="149.0" layoutY="108.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <ChoiceBox fx:id="TensileDirectionCB" layoutX="26.0" layoutY="170.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+            <Label layoutX="108.0" layoutY="139.0" prefHeight="31.0" prefWidth="53.0" text="כיוון:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="Abox" layoutX="89.0" layoutY="218.0" nodeOrientation="RIGHT_TO_LEFT" text="לתעופה">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="16.0" layoutY="77.0" prefHeight="31.0" prefWidth="111.0" text="עובי/קוטר:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="TensileThicknessCB" layoutX="24.0" layoutY="108.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="78.0" layoutY="255.0" prefHeight="31.0" prefWidth="186.0" text="עובי/קוטר אחר:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="CustomThicknessTxt" alignment="CENTER" layoutX="17.0" layoutY="247.0" prefHeight="31.0" prefWidth="53.0" />
+            <Label layoutX="126.0" layoutY="286.0" prefHeight="31.0" prefWidth="113.0" text="מס דגמים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="TensileSpecimenTxt" alignment="CENTER" layoutX="89.0" layoutY="286.0" prefHeight="31.0" prefWidth="30.0" />
+            <Label layoutX="137.0" layoutY="428.0" prefHeight="31.0" prefWidth="91.0" text="שרטוט:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="login3" buttonType="RAISED" defaultButton="true" layoutX="58.0" layoutY="424.0" prefHeight="39.0" prefWidth="74.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXCheckBox fx:id="TensileCB" layoutX="88.0" layoutY="-48.0" nodeOrientation="RIGHT_TO_LEFT" text="מתיחה">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="MetaCB" layoutX="-202.0" layoutY="-47.0" nodeOrientation="RIGHT_TO_LEFT" text="מטלוגרפייה">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="ChemCB" layoutX="-473.0" layoutY="-46.0" nodeOrientation="RIGHT_TO_LEFT" text="אנליזה כימית">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="MicroCB" layoutX="-734.0" layoutY="-49.0" nodeOrientation="RIGHT_TO_LEFT" text="מיקרו-קושיות">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="HardnessCB" layoutX="-691.0" layoutY="-74.0" nodeOrientation="RIGHT_TO_LEFT" text="קושיות">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="ImpactCB" layoutX="-1000.0" layoutY="-50.0" nodeOrientation="RIGHT_TO_LEFT" text="נגיפה">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="BendCB" layoutX="-1005.0" layoutY="-73.0" nodeOrientation="RIGHT_TO_LEFT" text="כפיפה">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </Pane>
+      <JFXButton fx:id="MicroHBtn11" buttonType="RAISED" defaultButton="true" layoutX="34.0" layoutY="920.0" onAction="#GenerateForm" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הכן טופס" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="567.0" layoutY="92.0" prefHeight="477.0" prefWidth="262.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="79.0" layoutY="14.0" prefHeight="31.0" prefWidth="134.0" text="סוג הבדיקה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ChemicalTypeCB" layoutX="22.0" layoutY="44.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="220.0" />
+            <Label layoutX="60.0" layoutY="75.0" prefHeight="31.0" prefWidth="159.0" text="מיקום הבדיקה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ChemicalPlaceCB" layoutX="22.0" layoutY="106.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="220.0" />
+            <JFXCheckBox fx:id="RemCoatBox" layoutX="125.0" layoutY="152.0" nodeOrientation="RIGHT_TO_LEFT" text="הסר ציפוי:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="AppendixBox" layoutX="143.0" layoutY="183.0" nodeOrientation="RIGHT_TO_LEFT" text="נספחים">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="120.0" layoutY="223.0" prefHeight="31.0" prefWidth="125.0" text="מס דגמים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="ChemicalSpecimenTxt" alignment="CENTER" layoutX="87.0" layoutY="219.0" prefHeight="31.0" prefWidth="30.0" />
+         </children>
+      </Pane>
+      <Label layoutX="78.0" layoutY="60.0" prefHeight="36.0" prefWidth="159.0" text="נגיפה/כפיפה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="60.0" prefHeight="36.0" prefWidth="250.0" text="קושיות ומיקרו קושיות" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Pane layoutX="840.0" layoutY="92.0" prefHeight="477.0" prefWidth="262.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" prefHeight="31.0" prefWidth="121.0" text="סוג הבדיקה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MetaTypeCB" layoutX="26.0" layoutY="46.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+            <Label layoutX="108.0" layoutY="77.0" prefHeight="31.0" prefWidth="53.0" text="תקן:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MetaStdCB" layoutX="26.0" layoutY="108.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+            <Label layoutX="69.0" layoutY="139.0" prefHeight="31.0" prefWidth="125.0" text="מיקום הדגם:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MeteDirectionCB" layoutX="26.0" layoutY="169.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+            <Label layoutX="82.0" layoutY="200.0" prefHeight="31.0" prefWidth="104.0" text="סוג הדגם:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MetaModelCB" layoutX="26.0" layoutY="228.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+            <JFXCheckBox fx:id="UltraCleanBox" layoutX="107.0" layoutY="266.0" nodeOrientation="RIGHT_TO_LEFT" text="ניקוי אולטרסוני">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="AlcoCleanBox" layoutX="140.0" layoutY="295.0" nodeOrientation="RIGHT_TO_LEFT" text="ניקוי בכהל">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="134.0" layoutY="426.0" prefHeight="31.0" prefWidth="104.0" text="ללטש ל:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="PolishCB" layoutX="34.0" layoutY="426.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <JFXCheckBox fx:id="MarkBox" layoutX="114.0" layoutY="324.0" nodeOrientation="RIGHT_TO_LEFT" text="סימון פני שטח">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </Pane>
+      <Pane layoutX="296.0" layoutY="92.0" prefHeight="477.0" prefWidth="262.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="94.0" layoutY="-2.0" prefHeight="31.0" prefWidth="104.0" text="קושיות:" textFill="#0f5d9a" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="31.0" prefHeight="31.0" prefWidth="61.0" text="שיטה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="HardMethodCB" layoutX="44.0" layoutY="31.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="134.0" />
+            <Label layoutX="151.0" layoutY="71.0" prefHeight="31.0" prefWidth="104.0" text="מס דגמים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="HardnessSpecimenTxt" alignment="CENTER" layoutX="116.0" layoutY="62.0" prefHeight="31.0" prefWidth="30.0" />
+            <Label layoutX="58.0" layoutY="145.0" prefHeight="31.0" prefWidth="159.0" text="מיקרו-קושיות:" textFill="#0f5d9a" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="176.0" prefHeight="31.0" prefWidth="104.0" text="שיטה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MicroHMethodCB" layoutX="24.0" layoutY="176.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="137.0" />
+            <ChoiceBox fx:id="HardLoadCB" layoutX="21.0" layoutY="114.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="159.0" />
+            <Label layoutX="141.0" layoutY="212.0" prefHeight="31.0" prefWidth="125.0" text="מס דגמים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="MicroHSpecimenTxt" alignment="CENTER" layoutX="109.0" layoutY="207.0" prefHeight="31.0" prefWidth="30.0" />
+            <ChoiceBox fx:id="MicroHLoadCB" layoutX="21.0" layoutY="254.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="159.0" />
+            <Label layoutX="143.0" layoutY="298.0" prefHeight="31.0" prefWidth="104.0" text="סוג בדיקה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="MicroHTypeCB" layoutX="24.0" layoutY="298.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="113.0" />
+            <Label layoutX="187.0" layoutY="114.0" prefHeight="31.0" prefWidth="61.0" text="עומס:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="192.0" layoutY="254.0" prefHeight="31.0" prefWidth="61.0" text="עומס:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="623.0" layoutY="60.0" prefHeight="36.0" prefWidth="164.0" text="אנליזה כימית" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1199.0" layoutY="60.0" prefHeight="36.0" prefWidth="81.0" text="מתיחה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="901.0" layoutY="60.0" prefHeight="36.0" prefWidth="134.0" text="מטלוגרפייה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="FormNameTxt" layoutX="1395.0" layoutY="175.0" prefHeight="31.0" prefWidth="203.0" />
+      <Label layoutX="1427.0" layoutY="80.0" prefHeight="50.0" prefWidth="187.0" text="שם הטופס:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="1479.0" layoutY="130.0" prefHeight="50.0" prefWidth="134.0" text=":&quot;Form 52 +&quot;" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="MicroHBtn111" buttonType="RAISED" defaultButton="true" layoutX="248.0" layoutY="920.0" onAction="#OpenReport" prefHeight="50.0" prefWidth="169.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="פתח טופס" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="login2112" buttonType="RAISED" defaultButton="true" layoutX="34.0" layoutY="803.0" onAction="#unSelect" prefHeight="39.0" prefWidth="137.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="בטל בחירה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Pagination fx:id="StatePager" layoutX="1086.0" layoutY="807.0" maxPageIndicatorCount="0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="177.0" prefWidth="250.0" style="-fx-page-information-visible: 0;" />
+      <Label layoutX="1453.0" layoutY="206.0" prefHeight="50.0" prefWidth="159.0" text="תאריך מסירה: " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="Form52Dater" defaultColor="#0f5d9a" layoutX="1391.0" layoutY="256.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="205.0" />
+      <JFXCheckBox fx:id="ReturnBox" contentDisplay="RIGHT" layoutX="1402.0" layoutY="315.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="28.0" prefWidth="196.0" text="החזרת הדגמים">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXCheckBox>
+      <Label layoutX="1477.0" layoutY="359.0" prefHeight="31.0" prefWidth="125.0" text="סוג העבודה:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="JobCB" layoutX="1387.0" layoutY="390.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+      <Label layoutX="1508.0" layoutY="421.0" prefHeight="31.0" prefWidth="88.0" text="הסמכות:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="AutoCB" layoutX="1387.0" layoutY="452.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="212.0" />
+      <JFXButton fx:id="MicroHBtn112" buttonType="RAISED" defaultButton="true" layoutX="34.0" layoutY="860.0" onAction="#SignForm" prefHeight="50.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="חתימה" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="774.0" layoutY="807.0" prefHeight="31.0" prefWidth="169.0" text="*הוסף &quot;:&quot; בסוף " textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="277.0" layoutY="816.0" prefHeight="31.0" prefWidth="220.0" text="שפת הפרטים:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="HebRadio" layoutX="239.0" layoutY="850.0" nodeOrientation="RIGHT_TO_LEFT" text="עברית" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="EngRadio" layoutX="333.0" layoutY="850.0" nodeOrientation="RIGHT_TO_LEFT" text="אנגלית" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton fx:id="login212" buttonType="RAISED" defaultButton="true" layoutX="585.0" layoutY="853.0" onAction="#OpenForm52Template" prefHeight="36.0" prefWidth="111.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="פתח" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="569.0" layoutY="818.0" prefHeight="31.0" prefWidth="164.0" text="מתבנית מוכנה:" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="login2121" buttonType="RAISED" defaultButton="true" layoutX="585.0" layoutY="902.0" onAction="#UnselectTemplate" prefHeight="38.0" prefWidth="111.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="בטל " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="27.0" layoutY="92.0" prefHeight="477.0" prefWidth="262.0" style="-fx-border-color: #0f5d9a; -fx-border-radius: 2em; -fx-background-radius: 3em; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="97.0" layoutY="-2.0" prefHeight="31.0" prefWidth="104.0" text="נגיפה:" textFill="#0f5d9a" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="16.0" prefHeight="31.0" prefWidth="53.0" text="תקן:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ImpactSizeCB" layoutX="151.0" layoutY="46.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="157.0" layoutY="18.0" prefHeight="31.0" prefWidth="88.0" text="מימדים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ImpactStdCB" layoutX="20.0" layoutY="46.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="34.0" layoutY="77.0" prefHeight="31.0" prefWidth="74.0" text="מיקום:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ImpactPlaceCB" layoutX="22.0" layoutY="104.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="144.0" layoutY="77.0" prefHeight="31.0" prefWidth="121.0" text="טמפרטורה:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ImpactTempCB" layoutX="151.0" layoutY="104.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="107.0" layoutY="164.0" prefHeight="31.0" prefWidth="80.0" text="כפיפה:" textFill="#0f5d9a" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="BendTypeCB" layoutX="26.0" layoutY="217.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="52.0" layoutY="190.0" prefHeight="31.0" prefWidth="61.0" text="סוג:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="251.0" prefHeight="31.0" prefWidth="53.0" text="תקן:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="BendStdCB" layoutX="26.0" layoutY="278.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="169.0" layoutY="191.0" prefHeight="31.0" prefWidth="74.0" text="זווית:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="BendAngleCB" layoutX="153.0" layoutY="217.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="142.0" layoutY="436.0" prefHeight="31.0" prefWidth="91.0" text="שרטוט:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="login31" buttonType="RAISED" defaultButton="true" layoutX="55.0" layoutY="432.0" prefHeight="39.0" prefWidth="74.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="102.0" layoutY="397.0" prefHeight="31.0" prefWidth="125.0" text="מס דגמים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="BendSpecimenTxt" alignment="CENTER" layoutX="67.0" layoutY="391.0" prefHeight="31.0" prefWidth="30.0" />
+            <Label layoutX="92.0" layoutY="137.0" prefHeight="31.0" prefWidth="113.0" text="מס דגמים:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="ImpactSpecimenTxt" alignment="CENTER" layoutX="56.0" layoutY="133.0" prefHeight="31.0" prefWidth="30.0" />
+            <Label layoutX="153.0" layoutY="251.0" prefHeight="31.0" prefWidth="91.0" text="פאקטור:" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="BendFactorCB" layoutX="151.0" layoutY="278.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="91.0" />
+            <Label layoutX="21.0" layoutY="331.0" prefHeight="31.0" prefWidth="220.0" text="עובי לחישוב - t (מ&quot;מ):" textFill="#0f5d9a">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="BendThickness" alignment="CENTER" layoutX="107.0" layoutY="357.0" prefHeight="31.0" prefWidth="53.0" />
+         </children>
+      </Pane>
+      <Label layoutX="795.0" layoutY="838.0" prefHeight="31.0" prefWidth="150.0" text="כל פרט חדש." textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="login2" buttonType="RAISED" defaultButton="true" layoutX="1437.0" layoutY="511.0" onAction="#Refresh" prefHeight="39.0" prefWidth="113.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="נקה הכל" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox fx:id="MultiSample" layoutX="887.0" layoutY="941.0" nodeOrientation="RIGHT_TO_LEFT" text="טופס למספר דגמים">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</AnchorPane>

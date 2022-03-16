@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="780.0" layoutY="37.0" prefHeight="81.0" prefWidth="135.0" text="אודות" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="374.0" prefHeight="81.0" prefWidth="1425.0" text="הוכנה על ידי עידן קורון © 2019 כל הזכויות שמורות" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="55.0" />
+         </font>
+      </Label>
+      <MaterialDesignIconView fill="#0f5d9a" glyphName="TROPHY_VARIANT_OUTLINE" layoutX="745.0" layoutY="656.0" size="200" />
+      <Label layoutX="647.0" layoutY="187.0" prefHeight="81.0" prefWidth="1425.0" text="IKADOCS  תוכנת" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="55.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

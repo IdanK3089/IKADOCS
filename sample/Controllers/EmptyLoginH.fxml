@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="346.0" layoutY="362.0" prefHeight="81.0" prefWidth="1111.0" text="הכנס כמשתמש ראשי כדי לערוך תקנים" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="55.0" />
+         </font>
+      </Label>
+      <MaterialDesignIconView fill="#0f5d9a" glyphName="FINGERPRINT" layoutX="709.0" layoutY="650.0" size="200" />
+   </children>
+</AnchorPane>

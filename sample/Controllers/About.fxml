@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="762.0" layoutY="44.0" prefHeight="81.0" prefWidth="135.0" text="About" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="373.0" prefHeight="81.0" prefWidth="1425.0" text="Made By Idan Koron © 2019 All Rights Reserved" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="55.0" />
+         </font>
+      </Label>
+      <MaterialDesignIconView fill="#0f5d9a" glyphName="TROPHY_VARIANT_OUTLINE" layoutX="745.0" layoutY="644.0" size="200" />
+      <Label layoutX="601.0" layoutY="191.0" prefHeight="81.0" prefWidth="1425.0" text="IKADOCS Software" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="55.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="905.0" prefHeight="81.0" prefWidth="1425.0" text="All use of the software is subject to continuous premission from the software Maker." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

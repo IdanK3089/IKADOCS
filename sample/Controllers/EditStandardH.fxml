@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AboutPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="1890.0" prefHeight="1000.0" prefWidth="1890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.StandardController">
+   <children>
+      <TableView fx:id="StdTbl" layoutX="972.0" layoutY="46.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a; -fx-border-width: 2dp;">
+        <columns>
+          <TableColumn fx:id="StdClm" onEditCommit="#ParamEdit" prefWidth="253.0" text="Standard" />
+          <TableColumn fx:id="StandardSelClm" minWidth="25.0" prefWidth="28.0" resizable="false" />
+        </columns>
+      </TableView>
+      <TableView fx:id="GeneralTbl" layoutX="638.0" layoutY="46.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="GeneralClm" onEditCommit="#ParamEdit" prefWidth="253.0" resizable="false" text="General Material" />
+            <TableColumn fx:id="GeneralSelClm" minWidth="25.0" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="SpecificTbl" layoutX="307.0" layoutY="47.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="SpecificClm" onEditCommit="#ParamEdit" prefWidth="252.99996948242188" resizable="false" text="Specific Material" />
+            <TableColumn fx:id="SpecificSelClm" minWidth="25.0" prefWidth="28.0" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ClassTbl" layoutX="970.0" layoutY="373.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="ClassClm" onEditCommit="#ParamEdit" prefWidth="253.0" text="Class Property\General Info" />
+            <TableColumn fx:id="ClassSelClm" minWidth="25.0" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ShapeTbl" layoutX="638.0" layoutY="371.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="ShapeClm" onEditCommit="#ParamEdit" prefWidth="253.0" text="Shape" />
+            <TableColumn fx:id="ShapeSelClm" minWidth="25.0" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="SizeTbl" layoutX="307.0" layoutY="371.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="SizeClm" onEditCommit="#ParamEdit" prefWidth="253.0" text="Size" />
+            <TableColumn fx:id="SizeSelClm" minWidth="25.0" prefWidth="28.0" resizable="false" />
+         </columns>
+      </TableView>
+      <TableView fx:id="TestTbl" layoutX="969.0" layoutY="703.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="280.0" prefWidth="300.0" style="-fx-border-color: #0f5d9a;">
+         <columns>
+            <TableColumn fx:id="TestTypeClm" onEditCommit="#ParamEdit" prefWidth="252.0" text="Test Type" />
+            <TableColumn fx:id="TypeSelClm" minWidth="25.0" prefWidth="0.0" resizable="false" />
+         </columns>
+      </TableView>
+      <Label layoutX="618.0" layoutY="-18.0" prefHeight="71.0" prefWidth="406.0" text="הוספה/שינוי תקנים" textFill="#0f5d9a" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="StandardText" layoutX="1058.0" layoutY="331.0" prefHeight="31.0" prefWidth="208.0" />
+      <JFXTextField fx:id="GeneralText" layoutX="725.0" layoutY="328.0" prefHeight="31.0" prefWidth="208.0" />
+      <JFXTextField fx:id="SpecificText" layoutX="392.0" layoutY="328.0" prefHeight="31.0" prefWidth="208.0" />
+      <JFXTextField fx:id="ClassText" layoutX="1051.0" layoutY="661.0" prefHeight="31.0" prefWidth="208.0" />
+      <JFXTextField fx:id="ShapeText" layoutX="725.0" layoutY="661.0" prefHeight="31.0" prefWidth="208.0" />
+      <JFXTextField fx:id="SizeText" layoutX="392.0" layoutY="661.0" prefHeight="31.0" prefWidth="208.0" />
+      <JFXButton fx:id="login" buttonType="RAISED" defaultButton="true" layoutX="972.0" layoutY="330.0" onAction="#insertStandardData" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="GeneralBtn" buttonType="RAISED" defaultButton="true" layoutX="638.0" layoutY="328.0" onAction="#AddGeneral" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="AddSpecific" buttonType="RAISED" defaultButton="true" layoutX="307.0" layoutY="328.0" onAction="#AddSpecific" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ClassBtn" buttonType="RAISED" defaultButton="true" layoutX="970.0" layoutY="656.0" onAction="#AddClass" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ShapeBtn" buttonType="RAISED" defaultButton="true" layoutX="638.0" layoutY="656.0" onAction="#AddShape" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="SizeBtn" buttonType="RAISED" defaultButton="true" layoutX="307.0" layoutY="653.0" onAction="#AddSize" prefHeight="39.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="1350.0" layoutY="913.0" onAction="#RestoreDB" prefHeight="60.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="שחזר מאגר נתונים" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="37.0" layoutY="903.0" onAction="#Backup" prefHeight="60.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="גבה מאגר נתונים" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="123.0" layoutY="674.0" prefHeight="39.0" prefWidth="86.0" text="חשוב!" textFill="#ff1500">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="718.0" prefHeight="31.0" prefWidth="277.0" text="לא לשכוח להוסיף &quot;Rest&quot;,    " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="743.0" prefHeight="31.0" prefWidth="250.0" text="חשוב להתחיל את המילה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1544.0" layoutY="370.0" prefHeight="31.0" prefWidth="45.0" text="לא!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1309.0" layoutY="370.0" prefHeight="31.0" prefWidth="250.0" text="להכניס רווחים במינימום," textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1318.0" layoutY="395.0" prefHeight="31.0" prefWidth="308.0" text=",מקסימום,מינימום טולרנס, " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1300.0" layoutY="421.0" prefHeight="31.0" prefWidth="308.0" text="מקסימום טולרנס ואי הוודאות." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1414.0" layoutY="485.0" prefHeight="31.0" prefWidth="67.0" text="לזכור!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1290.0" layoutY="522.0" prefHeight="31.0" prefWidth="325.0" text="לגבות את הנתונים לאחר העריכה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1417.0" layoutY="577.0" prefHeight="31.0" prefWidth="67.0" text="חשוב!" textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1291.0" layoutY="608.0" prefHeight="31.0" prefWidth="344.0" text="בפרמטר &quot;Others&quot; בבדיקה הכימית" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1287.0" layoutY="635.0" prefHeight="31.0" prefWidth="344.0" text="ניתן להוסיף ביטויים שיופיעו בטבלה" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1545.0" layoutY="664.0" prefHeight="31.0" prefWidth="78.0" text="בדו&quot;ח. " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1306.0" layoutY="707.0" prefHeight="31.0" prefWidth="277.0" text="דוגמא: &quot;Cu + 10Sn &lt;= 0.6&quot;." textFill="RED">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1315.0" layoutY="738.0" prefHeight="31.0" prefWidth="277.0" text="יש לרשום את הביטוי בערכי " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1336.0" layoutY="763.0" prefHeight="31.0" prefWidth="243.0" text="המינימום או המקסימום." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="770.0" prefHeight="31.0" prefWidth="263.0" text="עם &quot;R&quot; גדולה וללא רווחים." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="457.0" prefHeight="39.0" prefWidth="86.0" text="טיפ!" textFill="#10c65c">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="498.0" prefHeight="31.0" prefWidth="243.0" text="במידה והדרישה בבדיקות " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="522.0" prefHeight="31.0" prefWidth="263.0" text="מורכבת(מלבד כימיה), ניתן" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="547.0" prefHeight="31.0" prefWidth="226.0" text="למלא &quot;See Standard&quot; " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="569.0" prefHeight="31.0" prefWidth="147.0" text="ולהפנות לתקן." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="285.0" prefHeight="39.0" prefWidth="86.0" text="טיפ!" textFill="#10c65c">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="325.0" prefHeight="31.0" prefWidth="250.0" text="במידה ורוצים שפרמטר " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="349.0" prefHeight="31.0" prefWidth="250.0" text="בבדיקה הכימית יופיע גם " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="376.0" prefHeight="31.0" prefWidth="250.0" text="כשאין דרישות, ניתן למלא" textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="401.0" prefHeight="31.0" prefWidth="263.0" text="אפסים בדרישת המינימום " textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="427.0" prefHeight="31.0" prefWidth="181.0" text="של אותו פרמטר." textFill="#0f5d9a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="MinMaxTable" layoutX="299.0" layoutY="703.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="280.0" prefWidth="638.0">
+        <columns>
+          <TableColumn fx:id="ParamNameColumn" prefWidth="163.20006716251373" text="פרמטר" />
+          <TableColumn fx:id="MinColumn" minWidth="0.0" onEditCommit="#edit_colnom" prefWidth="92.79986572265625" text="מינימום" />
+            <TableColumn fx:id="MaxColumn" onEditCommit="#edit_colnom" prefWidth="92.7999267578125" text="מקסימום" />
+            <TableColumn fx:id="TolarenceMinColumn" minWidth="0.0" onEditCommit="#edit_colnom" prefWidth="87.19998168945312" text="\% מינימום Ø" />
+            <TableColumn fx:id="TolarenceMaxColumn" minWidth="0.0" onEditCommit="#edit_colnom" prefWidth="96.00006103515625" text="\% מקסימום Ø" />
+            <TableColumn fx:id="UncertainityColumn" onEditCommit="#edit_colnom" prefWidth="103.99997558593748" text="אי-וודאות" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
